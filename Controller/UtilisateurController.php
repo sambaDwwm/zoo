@@ -215,17 +215,5 @@ class UtilisateurController extends BaseController
         $this->afficherVue("inscription", $donnees);
     }
 
-    public function supprimerCompetence($parametres)
-    {
-        $idCompetence = $parametres[0];
-
-        $utilisateur = unserialize($_SESSION['utilisateur']);
-        $idUtilisateur = $utilisateur->getId();
-
-        $dao = new UtilisateurDao();
-        $dao->supprimerCompetenceUtilisateur($idCompetence, $idUtilisateur);
-
-        $this->afficherMessage("La competence a bien été supprimée", "success");
-        $this->redirection("utilisateur/profil");
-    }
+    
 }

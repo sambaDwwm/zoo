@@ -44,25 +44,14 @@ class UtilisateurDao extends BaseDao
             return false;
         }
     }
-
-
-    public function supprimerCompetenceUtilisateur($idCompetence, $idUtilisateur)
-    {
-        $connexion = new Connexion();
-
-        $requete = $connexion->prepare(
-            "DELETE FROM competence_utilisateur
-             WHERE id_competence = ? AND id_utilisateur = ?"
-        );
-
-        $requete->execute(
-            [
-                $idCompetence,
-                $idUtilisateur
-            ]
-        );
-    }
-
+    /**
+     * Undocumented function
+     *
+     * @param [type] $id
+     * @param [type] $pseudo
+     * @param [type] $nomAvatar
+     * @return void
+     */
     public function modifierUtilisateur($id, $pseudo, $nomAvatar)
     {
         $connexion = new Connexion();
@@ -86,23 +75,8 @@ class UtilisateurDao extends BaseDao
                 [$pseudo, $id]
             );
         }
+       
     }
 
-    public function ajouterCompetenceUtilisateur($idUtilisateur, $idCompetence)
-    {
-
-        $connexion = new Connexion();
-
-        $requete = $connexion->prepare(
-            "INSERT INTO competence_utilisateur (id_competence, id_utilisateur)
-             VALUES(? , ?)"
-        );
-
-        $requete->execute(
-            [
-                $idCompetence,
-                $idUtilisateur
-            ]
-        );
-    }
+    
 }

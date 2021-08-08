@@ -18,18 +18,19 @@ Autoloader::register();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce</title>
+    <title>zoo</title>
     <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 </head>
 
 <body>
 
     <header>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">oo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -38,7 +39,7 @@ Autoloader::register();
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link active" href="<?= Config::$baseUrl ?>/zoo/afficherTout">
-                                Voir les offres
+                                ajouter animal
                             </a>
                         </li>
                         <li class="nav-item">
@@ -47,12 +48,24 @@ Autoloader::register();
                             if (isset($_SESSION["utilisateur"])) {
                                 $utilisateur = unserialize($_SESSION["utilisateur"]);
 
-                                if ($utilisateur->getEntreprise()) {
+                                if ($utilisateur->getAdmin()) {
 
                             ?>
-                                    <a class="nav-link active" href="<?= Config::$baseUrl ?>/zoo/ajouter">
-                                        Ajouter une offre
+                            <ul>
+                                <li>
+                                <a class="nav-link active" href="<?= Config::$baseUrl ?>/zoo/ajouter">
+                                        Ajouter une cage
                                     </a>
+                                </li>
+                                <a class="nav-link active" href="<?= Config::$baseUrl ?>/zoo/ajouter">
+                                        Ajouter une animal
+                                    </a>
+                                </li>
+
+                            </ul>
+                                    
+                                    
+
                             <?php
 
                                 }
@@ -82,10 +95,6 @@ Autoloader::register();
                         }
                         ?>
 
-                        <form method="POST" class="d-flex" action="/zoo/offre/afficherTout">
-                            <input value="<?= isset($_POST['recherche']) ? $_POST['recherche'] : "" ?>" name="recherche" class="form-control me-sm-2" type="text" placeholder="Que désirez-vous ?">
-                            <input class="btn btn-secondary my-2 my-sm-0" type="submit" value="Recherche"></input>
-                        </form>
                 </div>
             </div>
         </nav>

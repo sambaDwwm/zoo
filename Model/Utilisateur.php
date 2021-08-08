@@ -9,71 +9,13 @@ class Utilisateur
     protected $pseudo;
     protected $motDePasse;
     protected $admin;
-    protected $nomAvatar;
-
-    /**
-     * Get the value of admin
-     */
-    public function getEntreprise()
-    {
-        return $this->admin;
-    }
-
-    /**
-     * Set the value of admin
-     *
-     * @return  self
-     */
-    public function setEntreprise($admin)
-    {
-        $this->admin = $admin;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of motDePasse
-     */
-    public function getMotDePasse()
-    {
-        return $this->motDePasse;
-    }
-
-    /**
-     * Set the value of motDePasse
-     *
-     * @return  self
-     */
-    public function setMotDePasse($motDePasse)
-    {
-        $this->motDePasse = $motDePasse;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of pseudo
-     */
-    public function getPseudo()
-    {
-        return $this->pseudo;
-    }
-
-    /**
-     * Set the value of pseudo
-     *
-     * @return  self
-     */
-    public function setPseudo($pseudo)
-    {
-        $this->pseudo = $pseudo;
-
-        return $this;
-    }
+   
+    
+    
 
     /**
      * Get the value of id
-     */
+     */ 
     public function getId()
     {
         return $this->id;
@@ -83,7 +25,7 @@ class Utilisateur
      * Set the value of id
      *
      * @return  self
-     */
+     */ 
     public function setId($id)
     {
         $this->id = $id;
@@ -92,21 +34,61 @@ class Utilisateur
     }
 
     /**
-     * Get the value of nomAvatar
-     */
-    public function getNomAvatar()
+     * Get the value of pseudo
+     */ 
+    public function getPseudo()
     {
-        return $this->nomAvatar;
+        return $this->pseudo;
     }
 
     /**
-     * Set the value of nomAvatar
+     * Set the value of pseudo
      *
      * @return  self
-     */
-    public function setNomAvatar($nomAvatar)
+     */ 
+    public function setPseudo($pseudo)
     {
-        $this->nomAvatar = $nomAvatar;
+        $this->pseudo = $pseudo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of motDePasse
+     */ 
+    public function getMotDePasse()
+    {
+        return $this->motDePasse;
+    }
+
+    /**
+     * Set the value of motDePasse
+     *
+     * @return  self
+     */ 
+    public function setMotDePasse($motDePasse)
+    {
+        $this->motDePasse = $motDePasse;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of admin
+     */ 
+    public function getAdmin()
+    {
+        return $this->admin;
+    }
+
+    /**
+     * Set the value of admin
+     *
+     * @return  self
+     */ 
+    public function setAdmin($admin)
+    {
+        $this->admin = $admin;
 
         return $this;
     }
